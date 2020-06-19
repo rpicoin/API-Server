@@ -12,8 +12,8 @@ First of all you have to create `config.py` file in root of project directory wi
 rid = 'api-server'
 cache = 3600  # Cache request for 1 hour
 secret = 'Lorem ipsum dolor sit amet.'
-endpoint = 'http://rpcuser:rpcpassword@127.0.0.1:6501/'
-host = '0.0.0.0'
+endpoint = 'http://rpcuser:rpcpassword@127.0.0.1:18001/'
+host = '127.0.0.1'
 port = 1234
 debug = True
 ssl = 'well known token'

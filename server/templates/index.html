@@ -6,14 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://volbil.com/cdn/business-tycoon/business-tycoon.min.css">
 		<link rel="stylesheet" href="https://volbil.com/cdn/entypo/entypo.css">
-		<link rel="icon" type="image/png" href="/static/favicon.png">
+		<link href="/static/favicon.ico" rel="icon" type="image/x-icon">
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
 		<style>
 			html {
@@ -23,16 +22,12 @@
 				min-height: 100%;
 			}
 			body {
-				font-family: 'Source Sans Pro', sans-serif;
 				padding-top: 75px;
 				padding-bottom: 56px;
 				position: relative;
 			}
-			#logo {
-				max-width: 30px;
-				max-height: 30px;
-				margin-top: -5px;
-				margin-right: 5px;
+			#supply {
+				cursor: pointer;
 			}
 			#qrCode canvas{
 				max-width: 100%;
@@ -84,7 +79,7 @@
 				padding: 10px 20px;
 			}
 		</style>
-		<title>RPICoin - API Documentation</title>
+		<title>API Documentation</title>
 		<meta name="description" content="RPICoin API Documentation">
 
 		<script>
@@ -93,10 +88,11 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a href="#" class="navbar-brand">
-					<b>API Documentation</b>
+					<svg id="logo" style="max-width: 15px;margin-top: -5px;margin-right: 5px;" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.82 480"><defs><style>.cls-1{fill:#fff;}</style></defs><title>rpicoin_whiteicon</title><path class="cls-1" d="M110.59,412.2q0-154.62,0-309.25c.08-.4.19-.8.24-1.2.26-1.9.37-3.82.78-5.68C115.3,79.56,128.94,68,146.06,66.85c2.9-.19,5.82,0,8.88,0V65q0-11.51,0-23a21,21,0,0,1,2.72-10.45c4.19-7.45,10.78-11.77,18.8-14.11,2.28-.66,4.65-1,7-1.48h7.2a4.15,4.15,0,0,0,.79.25,34.53,34.53,0,0,1,13,4c9.41,5.18,15,12.69,14.72,23.91-.18,7,0,14,0,21v1.48h36.33V64.93q0-11.44,0-22.88a20.7,20.7,0,0,1,2.25-9.56c4.08-8,10.9-12.53,19.27-15,2.28-.67,4.66-1,7-1.47h7.2a5.89,5.89,0,0,0,.93.26,34.58,34.58,0,0,1,12.71,3.87c9.59,5.23,15.17,12.89,14.86,24.28-.21,7.57,0,15.15-.06,22.73,0,1,.23,1.44,1.34,1.68,27.3,5.89,48.79,20.41,64.25,43.67a96.28,96.28,0,0,1,15.73,45c.15,1.6.35,3.2.53,4.8v9.21a7,7,0,0,0-.23.94c-.43,3.81-.58,7.67-1.3,11.42-6.09,32.14-23.7,55.91-52.3,71.64-1.33.73-2.7,1.38-4.19,2.14.38.22.57.35.78.45a99.39,99.39,0,0,1,34.49,27,98.22,98.22,0,0,1,22.22,53.8c.15,1.6.35,3.19.53,4.79v9.21a5,5,0,0,0-.23.94,94.9,94.9,0,0,1-11,40.3c-15,28-38.19,45.41-69.22,52.3-1.05.23-1.4.56-1.39,1.65,0,7,0,14,0,21a23.11,23.11,0,0,1-7,17c-12,12.2-34,13.36-47.5,2.52-6.43-5.17-10-11.71-9.74-20.16.16-6.09,0-12.19,0-18.28v-1.55H219.1v1.65c0,6.29-.05,12.57,0,18.86a23.08,23.08,0,0,1-7.45,17.46c-11.8,11.42-32.44,12.69-46,2.81-7.11-5.19-11-12-10.8-21.09.15-6,0-12.09,0-18.14v-1.64h-7.19a37.26,37.26,0,0,1-36.31-30.21C111.07,416.26,110.87,414.23,110.59,412.2ZM234.1,196.25h62.18c7.14,0,14.3-.17,21.43.05a31.46,31.46,0,1,0,1.48-62.89l-41.58,0H229.15l-48,0c-22.34,0-37.63,22.6-29.06,43.23,2,4.93,4.92,9.52,7.46,14.24,3.92,7.25,7.88,14.47,11.83,21.7l14,25.73q5.51,10.09,11,20.2a1.55,1.55,0,0,1,0,1.26q-5.52,10.08-11.11,20.13L169.4,308.47c-4.71,8.51-9.33,17.06-14.14,25.52-3.28,5.77-5.92,11.65-6.13,18.47-.48,15.47,11,29.58,26.26,31.76,3.6.51,7.34.06,11,.06H287.54c8.68,0,17.36,0,26,0,4.5,0,9,.34,13.47-.7a31.45,31.45,0,0,0,24.24-35.62c-2-14.28-14.62-25.83-29-26.44-5.83-.25-11.68-.13-17.53-.12-7.23,0-14.46.08-21.69.08s-14.74-.08-22.12-.08-14.45.06-21.68.09H234.2c.43-.83.72-1.42,1-2l10.44-18.86,14.06-25.4c5.31-9.59,5.88-19.41,1.25-29.38-1.77-3.82-3.94-7.45-6-11.15q-7.9-14.51-15.82-29C237.54,202.61,235.88,199.54,234.1,196.25Z" transform="translate(-110.59 -16)"/></svg>
+					<b>API</b>
 				</a>
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -104,7 +100,7 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a href="https://github.com/RPICoin/Api-Server" class="nav-link" target="_blank">GitHub</a>
+							<a href="https://github.com/RPICoin/API-Server" class="nav-link" target="_blank">GitHub</a>
 						</li>
 					</ul>
 				</div>
@@ -118,7 +114,7 @@
 		<!-- Footer :3 -->
 		<footer class="mb-3">
 			<div class="container text-center">
-				Made with <span class="entypo heart text-danger"></span> by <a target="_blank" href="https://github.com/volbil">Volbil</a>
+				Made with <span class="entypo heart text-danger"></span> by <a target="_blank" href="https://github.com/volbil/blockchain-explorer">Volbil</a>
 			</div>
 		</footer>
 
@@ -128,7 +124,7 @@
 				{
 					'name': '/info',
 					'example': '/info',
-					'description': 'This method return current info about the RPICoin network.',
+					'description': 'This method return current info about RPICoin network.',
 					'method': 'GET',
 					'id': 'info'
 				}, {
@@ -152,7 +148,7 @@
 					]
 				}, {
 					'name': '/block/string:hash',
-					'example': '/block/3485880f812b81ab588579bdb069bb13bdc5ad3ceada19641ca254dd7c5e4686',
+					'example': '/block/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae',
 					'description': 'This method return block info by given hash.',
 					'base': '/block/',
 					'method': 'GET',
@@ -161,7 +157,7 @@
 						{
 							'title': 'hash',
 							'description': 'Block hash',
-							'example': '3485880f812b81ab588579bdb069bb13bdc5ad3ceada19641ca254dd7c5e4686',
+							'example': '14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae',
 							'key': true
 						}, {
 							'title': 'offset',
@@ -171,7 +167,7 @@
 					]
 				}, {
 					'name': '/header/string:hash',
-					'example': '/header/3485880f812b81ab588579bdb069bb13bdc5ad3ceada19641ca254dd7c5e4686',
+					'example': '/header/14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae',
 					'description': 'This method return block header by given hash.',
 					'base': '/header/',
 					'method': 'GET',
@@ -180,7 +176,7 @@
 						{
 							'title': 'hash',
 							'description': 'Header hash',
-							'example': '3485880f812b81ab588579bdb069bb13bdc5ad3ceada19641ca254dd7c5e4686',
+							'example': '14c03ecf20edc9887fb98bf34b53809f063fc491e73f588961f764fac88ecbae',
 							'key': true
 						}
 					]
@@ -206,7 +202,7 @@
 					]
 				}, {
 					'name': '/balance/string:address',
-					'example': '/balance/RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+					'example': '/balance/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 					'description': 'This method return address balance.',
 					'base': '/balance/',
 					'method': 'GET',
@@ -215,13 +211,13 @@
 						{
 							'title': 'address',
 							'description': 'Request address',
-							'example': 'RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+							'example': 'BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 							'key': true
 						}
 					]
 				}, {
 					'name': '/mempool/string:address',
-					'example': '/mempool/RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+					'example': '/mempool/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 					'description': 'This method return address mempool transactions.',
 					'base': '/mempool/',
 					'method': 'GET',
@@ -230,13 +226,13 @@
 						{
 							'title': 'address',
 							'description': 'Request address',
-							'example': 'RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+							'example': 'BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 							'key': true
 						}
 					]
 				}, {
 					'name': '/unspent/string:address',
-					'example': '/unspent/RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc?amount=1',
+					'example': '/unspent/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH?amount=1',
 					'description': 'This method return address unspent outputs.',
 					'base': '/unspent/',
 					'method': 'GET',
@@ -245,7 +241,7 @@
 						{
 							'title': 'address',
 							'description': 'Request address',
-							'example': 'RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+							'example': 'BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 							'key': true
 						}, {
 							'title': 'amount',
@@ -256,7 +252,7 @@
 					]
 				}, {
 					'name': '/history/string:address',
-					'example': '/history/RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+					'example': '/history/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 					'description': 'This method return list of address transaction hashes.',
 					'base': '/history/',
 					'method': 'GET',
@@ -265,7 +261,7 @@
 						{
 							'title': 'address',
 							'description': 'Request address',
-							'example': 'RkgCADLgtesnNtvaqpwXp5WjPWjpn7HNHc',
+							'example': 'BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH',
 							'key': true
 						}, {
 							'title': 'offset',
@@ -276,7 +272,7 @@
 					]
 				}, {
 					'name': '/transaction/string:hash',
-					'example': '/transaction/8248617609fc8f31778e614048819e25d92dad7f165916c99d6a79af9e25715a',
+					'example': '/transaction/957fc74933dcfc7da179bd53d01b2a7f8ffda4daa7a39b83656acf52ef772070',
 					'description': 'This method return info about transaction.',
 					'base': '/transaction/',
 					'method': 'GET',
@@ -285,7 +281,7 @@
 						{
 							'title': 'hash',
 							'description': 'Transaction hash',
-							'example': '8248617609fc8f31778e614048819e25d92dad7f165916c99d6a79af9e25715a',
+							'example': '957fc74933dcfc7da179bd53d01b2a7f8ffda4daa7a39b83656acf52ef772070',
 							'key': true
 						}
 					]
@@ -296,6 +292,12 @@
 					'method': 'GET',
 					'id': 'mempool-info'
 				}, {
+					'name': '/supply',
+					'example': '/supply',
+					'description': 'This method return info about current coins supply.',
+					'method': 'GET',
+					'id': 'supply'
+				}, {
 					'name': '/fee',
 					'example': '/fee',
 					'description': 'This method return recomended transaction fee.',
@@ -303,7 +305,7 @@
 					'id': 'fee'
 				}, {
 					'name': '/decode/string:raw',
-					'example': '/decode/0100000001ce992da8dd8e07604bcdf19d342bdd6d238d1cf751704543db058fe1067527d8010000006a47304402201624fd8ace582851ce7db26e3323e1f72aabfa6160d97e479f5d07c2bcf96c4e02200b8fa0357dead10aa03484fe1941a0fcd141a8d8a683a4390404c208fedf47140121032efef984527042b09cfba5b4f902697ec023a9d29172bb6f3c3871be6ed4b6c2ffffffff028cf2c5a3040000001976a914683186242570e370b0a53c6bc69185707ecde5a488ac00e87648170000001976a914844609836c7e08b93c75e2d8db1a35a59968723688ac00000000',
+					'example': '/decode/0100000001c8c14eceaa84c5b45e28b4ab43bb1354960e5cf65ee480a281ebdce66e4f84cb010000006b483045022100bcf51d6111d3f23a23689d1956e010433e4ea65a3680211e5e442e229ccedd59022049e89b4762788d1718ebc5f6c300d2a898f161f22e08a6a8e55b96fb555865220121021121f5e63f7537a6c8e8881b0c54c5914cd117e775c3be0486205c45eced9117fdffffff02e8030000000000001976a9147fd7e409fc303e407a933b3392aa197c66348da688ac78630100000000001976a914436072406255f648da990ea1fa902cb98c4b6e2088ac00000000',
 					'description': 'This method return decoded info about transaction.',
 					'base': '/decode/',
 					'method': 'GET',
@@ -312,14 +314,14 @@
 						{
 							'title': 'transaction',
 							'description': 'Signed transaction',
-							'example': '0100000001ce992da8dd8e07604bcdf19d342bdd6d238d1cf751704543db058fe1067527d8010000006a47304402201624fd8ace582851ce7db26e3323e1f72aabfa6160d97e479f5d07c2bcf96c4e02200b8fa0357dead10aa03484fe1941a0fcd141a8d8a683a4390404c208fedf47140121032efef984527042b09cfba5b4f902697ec023a9d29172bb6f3c3871be6ed4b6c2ffffffff028cf2c5a3040000001976a914683186242570e370b0a53c6bc69185707ecde5a488ac00e87648170000001976a914844609836c7e08b93c75e2d8db1a35a59968723688ac00000000',
+							'example': '0100000001c8c14eceaa84c5b45e28b4ab43bb1354960e5cf65ee480a281ebdce66e4f84cb010000006b483045022100bcf51d6111d3f23a23689d1956e010433e4ea65a3680211e5e442e229ccedd59022049e89b4762788d1718ebc5f6c300d2a898f161f22e08a6a8e55b96fb555865220121021121f5e63f7537a6c8e8881b0c54c5914cd117e775c3be0486205c45eced9117fdffffff02e8030000000000001976a9147fd7e409fc303e407a933b3392aa197c66348da688ac78630100000000001976a914436072406255f648da990ea1fa902cb98c4b6e2088ac00000000',
 							'key': true
 						}
 					]
 				}, {
 					'name': '/broadcast',
 					'example': '/broadcast',
-					'description': 'This method broadcast raw signed transaction to the RPICoin network.',
+					'description': 'This method broadcast raw signed transaction to RPICoin network.',
 					'method': 'POST',
 					'id': 'broadcast',
 					'response': {
