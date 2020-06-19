@@ -233,7 +233,7 @@ This method return address balance.
 
 Params: none
 
-Request: https://api.rpicoin.com/balance/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.rpicoin.com/balance/RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM
 
 Responce:
 ```
@@ -254,7 +254,7 @@ This method return address mempool transactions.
 
 Params: none
 
-Request: https://api.rpicoin.com/mempool/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.rpicoin.com/mempool/RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM
 
 Responce:
 ```
@@ -282,7 +282,7 @@ This method return address unspent outputs.
 Params:
 `amount`: amount which you want to spend (default: 0 will return all utxos)
 
-Request: https://api.rpicoin.com/unspent/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.rpicoin.com/unspent/RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM
 
 Responce:
 ```
@@ -309,7 +309,7 @@ This method return list of address transaction hashes.
 Params:
 `offset`: offset of transactions list (default: 0)
 
-Request: https://api.rpicoin.com/history/BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH
+Request: https://api.rpicoin.com/history/RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM
 
 Responce:
 ```
@@ -381,7 +381,7 @@ Responce:
                     "reqSigs": 1,
                     "type": "pubkeyhash",
                     "addresses": [
-                        "BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH"
+                        "RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM"
                     ]
                 }
             },
@@ -452,7 +452,7 @@ Responce:
                     "reqSigs": 1,
                     "type": "pubkeyhash",
                     "addresses": [
-                        "BfSf3YKJ84P2vhSYLZkTCJvAmDtZs79XBH"
+                        "RQiMX6tEz3hPWomMHwMc2D969Xt5dXr7NM"
                     ]
                 }
             },
